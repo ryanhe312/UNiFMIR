@@ -11,6 +11,12 @@ import utility
 import model
 from div2k import normalize, PercentileNormalizer
 
+import os
+os.system("wget https://github.com/cxm12/UNiFMIR/releases/download/2023.10.05/example.tgz")
+os.system("wget https://github.com/cxm12/UNiFMIR/releases/download/2023.10.05/model.tgz")
+os.system("tar xzvf model.tgz")
+os.system("tar xzvf example.tgz")
+
 DEVICES = ['CPU','CUDA','Paralleled CUDA']
 QUANT = ['float32','float16',]
 TASKS = ['SR_Microtubules','SR_CCPs','SR_F-actin','SR_ER','Isotropic_Liver','Projection_Flywing','Denoising_Planaria','Denoising_Tribolium','Volumetric_VCD']
