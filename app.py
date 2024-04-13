@@ -212,9 +212,9 @@ def visualize(img_input, progress=gr.Progress()):
         return [[image], f'2D image loaded with shape {shape}']
     elif len(shape) == 3:
         clips = []
-        for i in range(shape[0]):
+        for i in range(min(shape[0],10)):
             clips.append(utility.savecolorim(None, image[i], norm=True))
-        return [clips, f'3D image loaded with shape {shape}']
+        return [clips, f'3D image loaded with shape {shape}, only showing first 10 slices.']
     else:
         gr.Error("Image must be 2 or 3 dimensional!")
         return None
