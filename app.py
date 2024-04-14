@@ -12,8 +12,8 @@ import model
 from div2k import normalize, PercentileNormalizer
 
 import os
-os.system("wget https://github.com/cxm12/UNiFMIR/releases/download/2023.10.05/example.tgz")
-os.system("wget https://github.com/cxm12/UNiFMIR/releases/download/2023.10.05/model.tgz")
+os.system("wget -O example.tgz https://github.com/cxm12/UNiFMIR/releases/download/2023.10.05/example.tgz")
+os.system("wget -O model.tgz https://github.com/cxm12/UNiFMIR/releases/download/2023.10.05/model.tgz")
 os.system("tar xzvf model.tgz")
 os.system("tar xzvf example.tgz")
 
